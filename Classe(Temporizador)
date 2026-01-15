@@ -1,0 +1,26 @@
+public class Temporizador  implements Runnable {
+	
+	private Cronometro c;
+	
+	public Temporizador (Cronometro c) {
+		this.c = c;
+		
+	}
+	@override
+	public void run() {
+		while (true) {
+			c.proximoSegundo();
+			c.horaAtual();
+			
+			
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			
+			
+		}
+	}
+
+}
