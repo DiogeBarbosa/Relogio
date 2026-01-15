@@ -1,0 +1,12 @@
+public class TestaCronometro {
+
+	public static void main(String[] args) {
+		Cronometro c = new Cronometro();
+		c.acertarCronometro(15, 59, 55);
+		
+		Temporizador tempo = new Temporizador(c);
+		new Thread(tempo).start();
+
+	}
+
+}
